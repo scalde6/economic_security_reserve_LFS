@@ -1,0 +1,340 @@
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body{
+
+    min-height: 100vh;
+    background: linear-gradient(110deg,#0f1829,#050812);
+    direction:rtl;
+}
+
+
+.big-container{
+
+    width: 100%;
+    height: 99vh; /*I changed height from 95vh to 97vh on 12/30/24*/
+    max-width: 1660px; /*I changed width from 1200px to 1660px on 12/30/24*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+   
+}
+@keyframes face{
+    to{opacity: 1;}
+
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+}
+
+
+::-webkit-scrollbar{
+    /*display:none;*/
+    width:12px;
+}
+
+::-webkit-scrollbar-thumb{
+    /*background: linear-gradient(transparent, #30ff00);*//* I commented this out and changed initial starting color to gold on 1/24/2026 */
+    background: linear-gradient(transparent, brown); /* gold, lightblue, lightblue, brown, brown */
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    /*background:linear-gradient(transparent,lightblue);*/ /* I commented this out and changed initial starting color to gold on 1/24/2026 */
+    background: linear-gradient(transparent, lightblue); /* lightblue, gold, brown, gold, lightblue */
+}
+
+
+video{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header{
+    min-height: 60px;
+    width: 100%;
+    border-bottom: 2.5px solid gold; /*changed from 1.5px on Saturday 12/27/25*/
+    overflow: hidden;
+    animation: face 2s ease-in-out forwards; /*initally 2s*/
+    animation-delay: 0.25s;
+    opacity: 0;
+    
+}
+
+header .logo{
+
+    float: left;
+    margin-left: 28px; /*initally 37px but I changed on 1/21/25*/
+}
+
+header .logo h1{
+    /*color: white;*/  /* I commented this out on 1/8/25 */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 60px;
+    /*text-shadow: 0 0 5px white;*/ /* I commented this out on 1/8/25 */
+}
+
+header nav{
+    float: right;
+    margin-right: 0px; /* initially 20px but I changed it to 0px on 1/3/25*/
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+nav ul{
+    
+    margin-right: 25px; /*initally 37px but I changed on 1/21/25*/
+    min-width: 150px;/*initially 450px on 12/24/2025*/
+
+
+}
+
+nav ul li{
+
+    list-style: none;
+    display: inline-block;
+    font-weight: 600; /*I added this*/
+}
+
+nav>ul>li:hover .submenu{
+    display: block; opacity: 1; max-height: 300px;
+    max-width: 5px; 
+    padding: 20px 0px 20px 0; overflow: visible;
+    outline: 3px solid brown; 
+}
+
+.horizontalFour:hover{
+    color: black;    
+}
+
+ul.submenu{
+    
+    position: absolute;  
+    top: 57.5px; /*previously 58px on Saturday 12/27/2025*/
+    /*right: 500px;*/
+    background-color: transparent; 
+    padding: -10px 0px 20px 0px;
+    max-height:0px;
+    max-width: 10px;
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 300ms linear, 
+    max-height 400ms linear, padding 400ms linear;
+
+}
+
+
+a{
+    background:black;
+    border-radius:5px;
+    text-decoration: none;
+    color: gold; /*was white*/ /*Was gold on Sunday 12/21/2025*/
+    padding: 8px 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 0 0 5px black; /*was white*/
+}
+
+.active{/*background was transparent
+    */
+    background: navy; /*removed "navy" on (Saturday 12/20/2025) inclusively, just removed black as well*/ /*teal, darkgoldenrod*/
+    border-radius: 20px;
+    color: white; /*navy*/
+    text-shadow: 0px 0px 10px black; /*white, removed black on 12/20/2025*/ /*was Orange on Sunday 12/21/2025*/
+    font-weight: 600;/*600 (Saturday 12/20/2025)*/
+}
+
+.active:hover{
+    background: brown; /*navy*/ /*was brown on Saturday 12/20/2025*/
+    color: white;
+    text-shadow: 0px 0px 5px gold; /*was gold on Sunday 12/21/2025*/ /*changed from 5px to 10px on Sunday 12/21/2025*/
+    font-weight: 400; /*400 (Saturday 12/20/2025)*/
+}
+
+a:hover{
+    background:transparent;
+    color: brown; /*initially turquoise*/ /*was red on Sunday 12/21/2025*/
+    text-shadow: 0px 0px 1px brown;
+}
+
+.submenu.a:hover{
+    color: red;
+}
+
+
+nav form{
+
+    height: 30px;
+    min-width: 300px;
+    margin: 10px 0;
+}
+
+form input{
+    height: 100%;
+    width: 250px;
+    border: 1px solid teal;
+    background: #0007;
+    padding: 0 5px;
+    color: white;
+    outline: none;
+
+}
+
+form button{
+    width: 50px;
+    height: 100%;
+    border: 1px solid teal;
+    background: #0007;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+section{
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;/*was white on Sunday 12/21/2025*/
+    text-align: center;
+    text-shadow: 0 0 10px brown; /*initially white*/
+    
+}
+
+section h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 10px;
+}
+
+section p{
+    line-height: 1.4;
+    margin: 15px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 8px darkgoldenrod; /*was darkgoldenrod on Sunday 12/21/2025*/
+    /*-webkit-text-stroke: 0.75px black;*/
+    font-weight: 600;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    color: white;
+    
+}
+
+footer h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    /*-webkit-text-stroke: 0.5px navy;*/ /* I added this line on 1/22/25 then commented out on the same day because I wanted to */
+}
+
+footer p{
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 8px black; /* black */
+    background: rgba(0,0,0,0.75); /*black*/
+    border-radius: 10px;
+}
+
+
+footer .container{
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 8px black; /* black */
+    background: rgba(0,0,0,0.75); /*black*/
+    border-radius: 10px;
+
+}
+
+footer .container-3{
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    /*border: 1px solid black;*/
+    width: 50%;
+    /*    margin: 0 auto;*/ /* I commented this out on 8/22/2026 */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border-radius: 15px;
+    margin-right: 405px;
+}
+
+img{
+    margin-top: 5px;
+    height: 250px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 1000px){
+    header .logo,
+    header nav{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 850px){
+    nav ul{
+        min-width: 300px;
+        margin: 0;
+    }
+    nav ul a{
+        padding: 5px 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
