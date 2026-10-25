@@ -1,0 +1,233 @@
+
+
+/*@import url('https://fonts.googleapis.com/css?family=Poppins:20');*/
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*    I inserted this on 1/1/25      */
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    
+    bottom: 8px; 
+    left: 16px;
+
+    /*bottom: 40px;I commented out these 2 lines on 1/7/25
+    left: 45px;*/
+ background: rgba(0, 0, 0, 0.75); /*0,0,0,0.75*/
+    border-radius: 8px;
+    z-index: 2;/*I added this line of code on 1/6/25*/
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    
+    top: 8px; 
+    left: 16px;
+    /*top: 35px; I commented out these 2 lines on 1/7/25
+    left: 45px;*/
+ background: rgba(0, 0, 0, 0.75); /*0,0,0,0.75*/
+    border-radius: 8px;
+    z-index: 2;/*I added this line of code on 1/6/25*/
+
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+   
+    top: 8px; 
+    right: 16px;
+   
+    /*top: 35px; I commented out these 2 lines on 1/7/25
+    right: 45px;*/
+
+ background: rgba(0, 0, 0, 0.75); /*0,0,0,0.75*/
+    border-radius: 8px;
+    z-index: 2;/*I added this line of code on 1/6/25*/
+
+    }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    
+    bottom: 8px; 
+    right: 16px;
+    
+    /*bottom: 40px; I commented out these 2 line on 1/7/25
+    right: 45px;*/
+     background: rgba(0, 0, 0, 0.75); /*0,0,0,0.75*/
+    border-radius: 8px;
+    z-index: 2;/*I added this line of code on 1/6/25*/
+
+    }
+    a{
+    background:transparent;
+    border-radius:8px;
+    text-decoration: none;
+    color: gold; /*was white*/ /*Was gold on Sunday 12/21/2025*/
+    padding: 8px 15px;
+    /*text-transform: uppercase;*/
+    display: inline-block;
+    text-shadow: 0 0 5px black; /*was white*/
+}
+
+a:hover{
+    background:black;
+    color: brown; /*initially turquoise*/ /*was red on Sunday 12/21/2025*/
+    text-shadow: 0px 0px 1px brown;
+    
+}
+
+/*    I inserted this on 1/1/25    */
+
+.banner{
+    width: 100%;
+    height: 100vh;  
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner video{
+    align-self: center; /**//*I added this line right after I commented "align-items:center" from .banner */
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /*I added this line of code on 1/6/25*/
+}
+
+.banner .content{
+    position: relative;
+    z-index: 1;
+    /*align-self: center;I added this line right after I commented "align-items:center" from .banner */
+ 
+    /*max-width: 1000px; I commented this out on 1/6/25*/
+    width: 1110px; /*I changed this line from 300px, to ___px  on 1/6/25*/
+    height: 600px; /*I changed this line from 400px, to ____px on 1/6/25*/
+    /*padding: 10px;*/ /*I added this line on 1/6/25 but commented out on 1/6/25*/
+    
+    /*margin: 0 auto; I commented this out on 1/6/25*/
+    text-align: center; 
+    z-index: 2;/*I added this line of code on 1/6/25*/
+
+
+   /*background: transparent; I added this line of code on 1/6/25*/
+    /*overflow: hidden; I commented this line of code out on 1/6/25 */
+    /*overflow-y: scroll; I commented this line of code out on 1/6/25 */
+
+    margin-bottom: 87px; /*I added this line of code on 1/6/25*/
+    margin-right: 55px; /*I added this line of code on 1/6/25*/
+}
+
+.banner .content h1{
+    width: 1180px; /*I added this line of code on 1/6/25*/
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 2;/*I added this line of code on 1/6/25*/
+    position: relative; /*I added this line of code on 1/6/25*/
+
+    margin-left: 0px; /*I added this line of code on 1/6/25*/ /*Upon that time I changed it from 40px to 30px on 1/22/25*/ /* On 8/17/2026 I changed this from 30px to 0px */
+    width: 1200px;
+
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+
+    margin-bottom: 24px;
+}
+
+.banner .content .container { /* .banner .content .container p{ */
+    font-size: 1.5em;
+    width: 1200px;height: 600px; /*I added this line on 1/6/25*/
+    color: #fff;
+    z-index: 2;/*I added this line of code on 1/6/25*/
+    position: relative; /*I added this line of code on 1/6/25*/
+
+    overflow: hidden; /*I added this line of code on 1/6/25*/
+    overflow-y: scroll; /*I added this line of code on 1/6/25*/
+
+    background: rgba(0,0,0,0.75);
+    border-radius: 8px;
+
+
+}
+
+
+
+::-webkit-scrollbar{
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background: #4ab4f6;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
